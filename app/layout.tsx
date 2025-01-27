@@ -28,6 +28,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="p-4 border-t-2 border-dotted">
+        <div className="flex items-center justify-center">
+          Desarrollador con ❤️ por <a>Jeremias Arriondo</a>
+        </div>
+      </footer>
       </body>
     </html>
   );
