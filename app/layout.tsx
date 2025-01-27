@@ -30,7 +30,11 @@ export default function RootLayout({
         {children}
         <footer className="p-4 border-t-2 border-dotted">
         <div className="flex items-center justify-center">
-          Desarrollador con ❤️ por <a>Jeremias Arriondo</a>
+          Desarrollador con ❤️ por &#160;
+          <a
+            href="https://www.linkedin.com/in/jeremias-arriondo/" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            target="_blank" rel="noopener noreferrer"
+          >Jeremias Arriondo</a>
         </div>
       </footer>
       </body>
