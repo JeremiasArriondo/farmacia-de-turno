@@ -1,9 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Phone, Clock, RefreshCw } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { MapPin, Phone, Clock, MapPinPlusInside } from "lucide-react"
 import { Pharmacy } from "@/interfaces/pharmacy"
 
 const pharmacies: Pharmacy[] = [
@@ -32,8 +31,115 @@ const pharmacies: Pharmacy[] = [
     isOnDuty: false,
     services: ["Home Delivery", "Consultations"],
   },
+  {
+    name: "Farmacia Villa",
+    address: "Iribarne entre Eva Perón y Melian",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Castro",
+    address: "Av. 25 de Mayo y Lavalle",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Boveri",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Montenovo",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Vitarelli",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Filippi",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Del Pueblo",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Delbaldo",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
+  {
+    name: "Farmacia Montenovo",
+    address: "Irigoyen entre San Martín y Zapiola",
+    phone: "",
+    openingHours: "8:00 AM - 10:00 PM",
+    coordinates: {
+      latitude: 1,
+      longitude: 1,
+    },
+    isOnDuty: false,
+    services: ["Home Delivery", "Consultations"],
+  },
 ];
-
 
 export default function Home() {
   const [pharmacy, setPharmacy] = useState(pharmacies[0])
@@ -62,7 +168,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-l from-white via-green-100 to-stone-100 flex flex-col items-center justify-center p-4 pb-12">
-      <h1 className="text-3xl font-bold mb-4">Farmacia de Turno</h1>
+      <div className="flex items-center mb-4 gap-2">
+        <span className="sr-only">Icono</span>
+        <MapPinPlusInside className="text-green-500" size={32}/>
+        <h1 className="text-3xl font-bold">Farmacia de Turno</h1>
+      </div>
       <h2 className="text-2xl font-bold mb-4 text-green-600">Rojas - Hoy</h2>
       <div className="mb-4">
         <span>Fecha del día:</span>
@@ -81,15 +191,15 @@ export default function Home() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center">
-            <MapPin className="mr-2 text-green-500" />
+            <MapPin className="mr-2 text-green-400" />
             <span className="text-gray-700 text-base">{pharmacy.address}</span>
           </div>
           <div className="flex items-center">
-            <Phone className="mr-2 text-green-500" />
+            <Phone className="mr-2 text-green-400" />
             <a href={`tel:${pharmacy.phone}`}>{pharmacy.phone}</a>
           </div>
           <div className="flex items-center">
-            <Clock className="mr-2 text-green-500" />
+            <Clock className="mr-2 text-green-400" />
             <span className="text-gray-700 text-base">{pharmacy.openingHours}</span>
           </div>
           <div className="flex items-center">

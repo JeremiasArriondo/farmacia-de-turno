@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Farmacia de Turno",
-  description: "Encontra qué farmacia está de turno el día de la fecha",
+  description: "Encontra qué farmacia está de turno el día de la fecha"
 };
 
 export default function RootLayout({
